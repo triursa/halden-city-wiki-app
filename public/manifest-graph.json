@@ -1,0 +1,1461 @@
+{
+  "nodes": [
+    {
+      "id": "arc-structure",
+      "label": "Arc Structure",
+      "section": null,
+      "type": "root"
+    },
+    {
+      "id": "adrian-vega-breakpoint",
+      "label": "Adrian Vega / Breakpoint",
+      "section": "alliance",
+      "type": "alliance"
+    },
+    {
+      "id": "darcy-cole-rampart",
+      "label": "Darcy Cole / Rampart",
+      "section": "alliance",
+      "type": "alliance"
+    },
+    {
+      "id": "darius-cole-aegis-prime",
+      "label": "Darius Cole / Aegis Prime",
+      "section": "alliance",
+      "type": "alliance"
+    },
+    {
+      "id": "declan-harrow-shroud",
+      "label": "Declan Harrow / Shroud",
+      "section": "alliance",
+      "type": "alliance"
+    },
+    {
+      "id": "elena-marquez-riftfire",
+      "label": "Elena Marquez / Riftfire",
+      "section": "alliance",
+      "type": "alliance"
+    },
+    {
+      "id": "ethan-roberts-paragon",
+      "label": "Ethan Roberts / Paragon",
+      "section": "alliance",
+      "type": "alliance"
+    },
+    {
+      "id": "javier-mendez-quantum",
+      "label": "Dr. Javier Mendez / Quantum",
+      "section": "alliance",
+      "type": "alliance"
+    },
+    {
+      "id": "kiara-jerach-starfall",
+      "label": "Kiara Je-rach / Starfall",
+      "section": "alliance",
+      "type": "alliance"
+    },
+    {
+      "id": "lila-ortega-manifest",
+      "label": "Lila Ortega",
+      "section": "alliance",
+      "type": "alliance"
+    },
+    {
+      "id": "lily-matthews",
+      "label": "Lily Matthews",
+      "section": "alliance",
+      "type": "alliance"
+    },
+    {
+      "id": "marcus-webb-requiem",
+      "label": "Marcus Webb / Requiem",
+      "section": "alliance",
+      "type": "alliance"
+    },
+    {
+      "id": "natalia-orlov-vanguard",
+      "label": "Natalia Orlov / The Vanguard",
+      "section": "alliance",
+      "type": "alliance"
+    },
+    {
+      "id": "riley-thomas-recluse",
+      "label": "Riley Thomas / Recluse",
+      "section": "alliance",
+      "type": "alliance"
+    },
+    {
+      "id": "sloane-callahan-arachne",
+      "label": "Sloane Callahan / Arachne",
+      "section": "alliance",
+      "type": "alliance"
+    },
+    {
+      "id": "zara-thorne-filament",
+      "label": "Zara Thorne / Filament",
+      "section": "alliance",
+      "type": "alliance"
+    },
+    {
+      "id": "allison-bryne-carrion",
+      "label": "Allison Bryne / Carrion",
+      "section": "npcs",
+      "type": "npcs"
+    },
+    {
+      "id": "anonymous-signal",
+      "label": "Signal",
+      "section": "npcs",
+      "type": "npcs"
+    },
+    {
+      "id": "ava-kincaid-circuit-breaker",
+      "label": "Ava Kincaid / Circuit Breaker",
+      "section": "npcs",
+      "type": "npcs"
+    },
+    {
+      "id": "brackish-linus-peters",
+      "label": "Linus Peters / Brackish",
+      "section": "npcs",
+      "type": "npcs"
+    },
+    {
+      "id": "caliber-deshawn-merritt",
+      "label": "Deshawn Merritt / Caliber",
+      "section": "npcs",
+      "type": "npcs"
+    },
+    {
+      "id": "carter-williams",
+      "label": "Carter Williams / Renegade Force",
+      "section": "npcs",
+      "type": "npcs"
+    },
+    {
+      "id": "casey-holt-scythe",
+      "label": "Casey Holt / Scythe",
+      "section": "npcs",
+      "type": "npcs"
+    },
+    {
+      "id": "casimir-vane",
+      "label": "Casimir Vane",
+      "section": "npcs",
+      "type": "npcs"
+    },
+    {
+      "id": "daniel-rojas-burnout",
+      "label": "Daniel Rojas / Burnout",
+      "section": "npcs",
+      "type": "npcs"
+    },
+    {
+      "id": "danielle-whittaker-wraith",
+      "label": "Danielle Whittaker / Wraith",
+      "section": "npcs",
+      "type": "npcs"
+    },
+    {
+      "id": "darkstar",
+      "label": "Darkstar",
+      "section": "npcs",
+      "type": "npcs"
+    },
+    {
+      "id": "detectives-shea-and-paz",
+      "label": "HCPD Detectives — Rowan Shea & Victor Paz",
+      "section": "npcs",
+      "type": "npcs"
+    },
+    {
+      "id": "dr-cassius-vrell",
+      "label": "Dr. Cassius Vrell",
+      "section": "npcs",
+      "type": "npcs"
+    },
+    {
+      "id": "edmund-crale",
+      "label": "Edmund Crale",
+      "section": "npcs",
+      "type": "npcs"
+    },
+    {
+      "id": "eli-crane-fault",
+      "label": "Eli Crane / Fault",
+      "section": "npcs",
+      "type": "npcs"
+    },
+    {
+      "id": "emmett-lorne",
+      "label": "Emmett Lorne",
+      "section": "npcs",
+      "type": "npcs"
+    },
+    {
+      "id": "gilt-nadia-osei",
+      "label": "Nadia Osei / Gilt",
+      "section": "npcs",
+      "type": "npcs"
+    },
+    {
+      "id": "halcyon",
+      "label": "Halcyon",
+      "section": "npcs",
+      "type": "npcs"
+    },
+    {
+      "id": "mason-matthews",
+      "label": "Mason Matthews",
+      "section": "npcs",
+      "type": "npcs"
+    },
+    {
+      "id": "mayor-theo-alcantara",
+      "label": "Mayor Theodore \\\"Theo\\\" Alcantara",
+      "section": "npcs",
+      "type": "npcs"
+    },
+    {
+      "id": "morgan-vale-nightfall",
+      "label": "Morgan Vale / Nightfall",
+      "section": "npcs",
+      "type": "npcs"
+    },
+    {
+      "id": "petra-mace-sable",
+      "label": "Petra Mace / Sable",
+      "section": "npcs",
+      "type": "npcs"
+    },
+    {
+      "id": "police-chief-hector-reyes",
+      "label": "Police Chief Hector Reyes",
+      "section": "npcs",
+      "type": "npcs"
+    },
+    {
+      "id": "raze",
+      "label": "Raze",
+      "section": "npcs",
+      "type": "npcs"
+    },
+    {
+      "id": "red-pill-owen-watson",
+      "label": "Owen Watson / Red Pill",
+      "section": "npcs",
+      "type": "npcs"
+    },
+    {
+      "id": "remnant",
+      "label": "Remnant",
+      "section": "npcs",
+      "type": "npcs"
+    },
+    {
+      "id": "senator-diana-okafor",
+      "label": "Senator Diana Okafor",
+      "section": "npcs",
+      "type": "npcs"
+    },
+    {
+      "id": "slake-barry-black",
+      "label": "Barry Black / Slake",
+      "section": "npcs",
+      "type": "npcs"
+    },
+    {
+      "id": "the-conductor-elliot-marsh",
+      "label": "Elliot Marsh / The Conductor",
+      "section": "npcs",
+      "type": "npcs"
+    },
+    {
+      "id": "avi-park-nova",
+      "label": "Avi Park / Nova",
+      "section": "pcs",
+      "type": "pcs"
+    },
+    {
+      "id": "casper-curie-half-life",
+      "label": "Casper Curie / Half-Life",
+      "section": "pcs",
+      "type": "pcs"
+    },
+    {
+      "id": "jason-apollo",
+      "label": "Jason James / Apollo",
+      "section": "pcs",
+      "type": "pcs"
+    },
+    {
+      "id": "rhys-romneya-noc",
+      "label": "Rhys Romneya / Noch",
+      "section": "pcs",
+      "type": "pcs"
+    },
+    {
+      "id": "sterling-slate-cosmic-knight",
+      "label": "Sterling Slate / Cosmic Knight",
+      "section": "pcs",
+      "type": "pcs"
+    },
+    {
+      "id": "aegis",
+      "label": "A.E.G.I.S.",
+      "section": "factions",
+      "type": "factions"
+    },
+    {
+      "id": "eclipse",
+      "label": "Eclipse",
+      "section": "factions",
+      "type": "factions"
+    },
+    {
+      "id": "the-alliance",
+      "label": "The Alliance",
+      "section": "factions",
+      "type": "factions"
+    },
+    {
+      "id": "vane-capital-group",
+      "label": "Vane Capital Group",
+      "section": "factions",
+      "type": "factions"
+    },
+    {
+      "id": "institutions",
+      "label": "Institutions",
+      "section": null,
+      "type": "root"
+    },
+    {
+      "id": "key-npcs",
+      "label": "Key Npcs",
+      "section": null,
+      "type": "root"
+    },
+    {
+      "id": "aegis-halden-regional-command",
+      "label": "A.E.G.I.S. Halden Regional Command",
+      "section": "locations",
+      "type": "locations"
+    },
+    {
+      "id": "alliance-tower",
+      "label": "Alliance Tower",
+      "section": "locations",
+      "type": "locations"
+    },
+    {
+      "id": "districts",
+      "label": "Halden City — Districts & Locations",
+      "section": "locations",
+      "type": "locations"
+    },
+    {
+      "id": "hq-ironworkers-hall",
+      "label": "The Hall — Ironworkers' Local 44",
+      "section": "locations",
+      "type": "locations"
+    },
+    {
+      "id": "street-texture",
+      "label": "Halden City — Street Texture",
+      "section": "locations",
+      "type": "locations"
+    },
+    {
+      "id": "metahuman-taxonomy",
+      "label": "Enhanced Individual Taxonomy — Halden City",
+      "section": "lore",
+      "type": "lore"
+    },
+    {
+      "id": "paragon-renegade-forces",
+      "label": "The Paragon and Renegade Forces",
+      "section": "lore",
+      "type": "lore"
+    },
+    {
+      "id": "the-wavelengths",
+      "label": "The Wavelengths",
+      "section": "lore",
+      "type": "lore"
+    },
+    {
+      "id": "world-history",
+      "label": "World History — Halden City Timeline",
+      "section": "lore",
+      "type": "lore"
+    },
+    {
+      "id": "lore",
+      "label": "Lore",
+      "section": null,
+      "type": "root"
+    },
+    {
+      "id": "naming-conventions",
+      "label": "Naming Conventions — Halden City",
+      "section": "meta",
+      "type": "meta"
+    },
+    {
+      "id": "player-facing-doc",
+      "label": "Legacy of Halden City",
+      "section": "meta",
+      "type": "meta"
+    },
+    {
+      "id": "tone-guide",
+      "label": "Tone Guide — Halden City",
+      "section": "meta",
+      "type": "meta"
+    },
+    {
+      "id": "overview",
+      "label": "Overview",
+      "section": null,
+      "type": "root"
+    },
+    {
+      "id": "player-characters",
+      "label": "Player Characters",
+      "section": null,
+      "type": "root"
+    },
+    {
+      "id": "gm-quick-ref",
+      "label": "GM Quick Reference — Legacy of Halden City",
+      "section": "plot",
+      "type": "plot"
+    },
+    {
+      "id": "jason-lily-matthews-scene",
+      "label": "Nightfall B-Plot — Lily Matthews Scene",
+      "section": "plot",
+      "type": "plot"
+    },
+    {
+      "id": "macro-arc-structure",
+      "label": "Macro Arc Structure — Legacy of Halden City",
+      "section": "plot",
+      "type": "plot"
+    },
+    {
+      "id": "open-threads",
+      "label": "Open Threads",
+      "section": "plot",
+      "type": "plot"
+    },
+    {
+      "id": "riley-parasite-arc",
+      "label": "Riley's Parasite Arc",
+      "section": "plot",
+      "type": "plot"
+    },
+    {
+      "id": "session-log",
+      "label": "Session Log — Legacy of Halden City",
+      "section": "plot",
+      "type": "plot"
+    },
+    {
+      "id": "signal-beat3-broadcast",
+      "label": "Signal — Beat 3 Broadcast Script",
+      "section": "plot",
+      "type": "plot"
+    },
+    {
+      "id": "signal-label-targets",
+      "label": "Signal — Label Shift Targets by Reveal",
+      "section": "plot",
+      "type": "plot"
+    },
+    {
+      "id": "carter-williams-renegade",
+      "label": "Carter Williams / Renegade Force — Masks Villain Sheet",
+      "section": "villains",
+      "type": "villains"
+    },
+    {
+      "id": "casimir-vane",
+      "label": "Casimir Vane — Masks Villain Sheet",
+      "section": "villains",
+      "type": "villains"
+    },
+    {
+      "id": "red-pill-owen-watson",
+      "label": "Red Pill (Owen Watson) — Masks Villain Sheet",
+      "section": "villains",
+      "type": "villains"
+    },
+    {
+      "id": "shade-construct",
+      "label": "SHADE Unit — PROMETHEUS Construct",
+      "section": "villains",
+      "type": "villains"
+    },
+    {
+      "id": "signal",
+      "label": "Signal — Masks Villain Sheet",
+      "section": "villains",
+      "type": "villains"
+    },
+    {
+      "id": "who-decides-arc",
+      "label": "\\\"Who Decides\\\" — Arc 1 Beat Sheet",
+      "section": "plot",
+      "type": "plot"
+    },
+    {
+      "id": "story-status",
+      "label": "Story Status",
+      "section": null,
+      "type": "root"
+    }
+  ],
+  "edges": [
+    {
+      "source": "arc-structure",
+      "target": "macro-arc-structure",
+      "type": "code_ref"
+    },
+    {
+      "source": "adrian-vega-breakpoint",
+      "target": "riley-/-recluse",
+      "type": "relationship",
+      "label": "Mentor. Surrogate son dynamic, unspoken. Complicated admiration. \"He acts all prickly but he's a softie.\""
+    },
+    {
+      "source": "adrian-vega-breakpoint",
+      "target": "avi",
+      "type": "relationship",
+      "label": "Emerging friendship. Genuine warmth, no agenda. Offered his base as a safe space; means it"
+    },
+    {
+      "source": "adrian-vega-breakpoint",
+      "target": "scythe",
+      "type": "relationship",
+      "label": "His girlfriend. He does not know what she is"
+    },
+    {
+      "source": "adrian-vega-breakpoint",
+      "target": "the-new-team",
+      "type": "relationship",
+      "label": "Big brother energy without the posturing. He was here first; he is not going to make it a thing"
+    },
+    {
+      "source": "darcy-cole-rampart",
+      "target": "riley-thomas-/-recluse",
+      "type": "relationship",
+      "label": "She disarms him, and she knows it, and she doesn't use it for anything. He told her who he was because the recruitment required it. She thinks he would have told her eventually anyway. He probably wouldn't have. She is probably right"
+    },
+    {
+      "source": "darcy-cole-rampart",
+      "target": "sloane-callahan-/-arachne",
+      "type": "relationship",
+      "label": "Has met her twice. Thinks she is very funny and slightly terrifying. Sloane has clocked that Darcy is one of the few people Riley doesn't perform composure around and has filed this information away without comment"
+    },
+    {
+      "source": "darcy-cole-rampart",
+      "target": "avi",
+      "type": "relationship",
+      "label": "Avi is quietly wounded by how naturally Riley opens around Darcy. Darcy doesn't know the wound is there. She would feel bad about it if she did. She would also not change how she is with Riley, because she didn't do anything wrong"
+    },
+    {
+      "source": "darcy-cole-rampart",
+      "target": "priya",
+      "type": "relationship",
+      "label": "Best friend, former college roommate, clinical psychologist. The one civilian in Darcy's life who knows about the powers. Not in the network. Not going to be"
+    },
+    {
+      "source": "darcy-cole-rampart",
+      "target": "gloria-cole",
+      "type": "relationship",
+      "label": "Her mother. Practical, perceptive, asks fewer questions than she notices things. Has clocked that Darcy's schedule has changed in the past several months and has said nothing yet"
+    },
+    {
+      "source": "darius-cole-aegis-prime",
+      "target": "a.e.g.i.s.",
+      "type": "relationship",
+      "label": "Closest ideological ally in-network. He is the clearest expression of what A.E.G.I.S. would prefer heroes to be. They know this. He knows they know"
+    },
+    {
+      "source": "darius-cole-aegis-prime",
+      "target": "ethan-roberts-/-paragon",
+      "type": "relationship",
+      "label": "Friction. Cole respects the power and challenges the philosophy. Ethan engages it; he doesn't dismiss Cole"
+    },
+    {
+      "source": "darius-cole-aegis-prime",
+      "target": "riley-thomas-/-recluse",
+      "type": "relationship",
+      "label": "Documented ongoing friction. Riley operated unsanctioned for fifteen years. Cole does not find that history admirable"
+    },
+    {
+      "source": "darius-cole-aegis-prime",
+      "target": "the-alliance-broadly",
+      "type": "relationship",
+      "label": "Present, adversarial in slow motion. He is the person in the room who asks the question nobody wants asked"
+    },
+    {
+      "source": "declan-harrow-shroud",
+      "target": "recluse-network",
+      "type": "relationship",
+      "label": "Adjacent. Riley is aware of him; the relationship is not formalized"
+    },
+    {
+      "source": "declan-harrow-shroud",
+      "target": "augie-ferreira",
+      "type": "relationship",
+      "label": "The union steward who leaves a light on. Knows Declan works the waterfront; has never asked what Declan does"
+    },
+    {
+      "source": "declan-harrow-shroud",
+      "target": "a.e.g.i.s.",
+      "type": "relationship",
+      "label": "They have a file. The file is misfiled. Something was decided"
+    },
+    {
+      "source": "elena-marquez-riftfire",
+      "target": "the-alliance",
+      "type": "relationship",
+      "label": "Core member since 2015. Has operated longest alongside Riley and Ethan of anyone on the team"
+    },
+    {
+      "source": "elena-marquez-riftfire",
+      "target": "jason-/-apollo",
+      "type": "relationship",
+      "label": "She extended the invitation. She was his physics teacher. She knows what that shift in dynamic costs both of them"
+    },
+    {
+      "source": "elena-marquez-riftfire",
+      "target": "riverside-ward",
+      "type": "relationship",
+      "label": "Home ground. She is known here not as a hero but as a teacher and neighbor, which is how she prefers it"
+    },
+    {
+      "source": "ethan-roberts-paragon",
+      "target": "riley-thomas-/-recluse",
+      "type": "relationship",
+      "label": "He sponsored Riley's formal recognition. Riley respects him and chafes at the Boy Scout framing. Ethan knows this and accepts it"
+    },
+    {
+      "source": "ethan-roberts-paragon",
+      "target": "kiara-je-rach-/-starfall",
+      "type": "relationship",
+      "label": "He asked her what she believed instead of fighting her. That choice defined her. He rarely talks about it"
+    },
+    {
+      "source": "ethan-roberts-paragon",
+      "target": "calypso",
+      "type": "relationship",
+      "label": "She told him \"you are becoming what you were meant to prevent.\" He did not respond. The message has not left him"
+    },
+    {
+      "source": "ethan-roberts-paragon",
+      "target": "new-team",
+      "type": "relationship",
+      "label": "The team is Paragon-sponsored. He is not their day-to-day mentor, but his institutional weight is present in every room they walk into"
+    },
+    {
+      "source": "javier-mendez-quantum",
+      "target": "the-alliance",
+      "type": "relationship",
+      "label": "Core member since 2015. Scientific and analytical backbone"
+    },
+    {
+      "source": "javier-mendez-quantum",
+      "target": "a.e.g.i.s.",
+      "type": "relationship",
+      "label": "Advisory asset — he operates more as independent scientific resource than agent. The relationship is transactional and mutual"
+    },
+    {
+      "source": "javier-mendez-quantum",
+      "target": "avi-park-/-nova",
+      "type": "relationship",
+      "label": "Biological father. Does not know"
+    },
+    {
+      "source": "kiara-jerach-starfall",
+      "target": "ethan-roberts-/-paragon",
+      "type": "relationship",
+      "label": "He is the reason she's here. She does not fully know what to do with that. His reputation took damage defending her publicly. She left before she could answer that debt"
+    },
+    {
+      "source": "kiara-jerach-starfall",
+      "target": "the-alliance",
+      "type": "relationship",
+      "label": "She was resident in Alliance Tower from 2009 to 2026. She is still, in some sense, observing — just from further away"
+    },
+    {
+      "source": "kiara-jerach-starfall",
+      "target": "sterling-slate-/-cosmic-knight",
+      "type": "relationship",
+      "label": "Parallel defectors. She mentored him. She left him a message. The relationship continues asynchronously"
+    },
+    {
+      "source": "kiara-jerach-starfall",
+      "target": "the-auditors",
+      "type": "relationship",
+      "label": "Former creators. Current status: unknown. They have not moved against her visibly — but Signal's broadcast may have changed the calculus"
+    },
+    {
+      "source": "lila-ortega-manifest",
+      "target": "aegis-halden-regional-command",
+      "type": "md_link"
+    },
+    {
+      "source": "lila-ortega-manifest",
+      "target": "aegis",
+      "type": "md_link"
+    },
+    {
+      "source": "lila-ortega-manifest",
+      "target": "casey-holt-scythe",
+      "type": "md_link"
+    },
+    {
+      "source": "lila-ortega-manifest",
+      "target": "adrian-vega-breakpoint",
+      "type": "md_link"
+    },
+    {
+      "source": "lila-ortega-manifest",
+      "target": "evelyn-shaw",
+      "type": "relationship",
+      "label": "Director and supervisor. Professional respect, careful navigation. Shaw is not hostile to Lila's approach but will override it without hesitation if the institutional calculus shifts"
+    },
+    {
+      "source": "lila-ortega-manifest",
+      "target": "the-team",
+      "type": "relationship",
+      "label": "Personal debt, professional complication. She is watching them more closely now — not as a threat, as a concern. The distinction matters to her"
+    },
+    {
+      "source": "lila-ortega-manifest",
+      "target": "adrian-vega-/-breakpoint",
+      "type": "relationship",
+      "label": "Active MANIFEST file. She has not pushed. She is still not pushing. But she is paying attention"
+    },
+    {
+      "source": "lila-ortega-manifest",
+      "target": "casey-holt-/-scythe",
+      "type": "relationship",
+      "label": "[GM ONLY] Lila does not know Scythe exists. The Casey Holt insertion was handled through Shaw directly, bypassing MANIFEST entirely. If Lila ever learned that A.E.G.I.S. ran a second-generation MANIFEST asset without her knowledge, the implications for her understanding of the program she runs would be significant"
+    },
+    {
+      "source": "lily-matthews",
+      "target": "mary-matthews-/-artemis",
+      "type": "relationship",
+      "label": "Older sister. Deceased. The only context Lily has for all of this"
+    },
+    {
+      "source": "lily-matthews",
+      "target": "jason-james-/-apollo",
+      "type": "relationship",
+      "label": "Stranger who knew her sister better than she did, in ways she's only beginning to understand"
+    },
+    {
+      "source": "marcus-webb-requiem",
+      "target": "riley-thomas-/-recluse",
+      "type": "relationship",
+      "label": "Mentor, complicated by the resurrection. Riley went outside A.E.G.I.S. to bring Marcus back and called in a debt to do it. The person he called is gone. Marcus knows Riley made a call and doesn't fully know what it cost. He is finding out on his own. Neither has confronted this directly — yet"
+    },
+    {
+      "source": "natalia-orlov-vanguard",
+      "target": "the-alliance",
+      "type": "relationship",
+      "label": "Co-founder. The institution she believes in most is also the one she holds the most lightly"
+    },
+    {
+      "source": "natalia-orlov-vanguard",
+      "target": "a.e.g.i.s.",
+      "type": "relationship",
+      "label": "The organization that built her and has never stopped watching her. Mutual wariness dressed as cooperation"
+    },
+    {
+      "source": "natalia-orlov-vanguard",
+      "target": "ethan-roberts-/-paragon",
+      "type": "relationship",
+      "label": "He brokered her inclusion. She respects the intent and is realistic about what that means"
+    },
+    {
+      "source": "natalia-orlov-vanguard",
+      "target": "casey-holt-/-scythe",
+      "type": "relationship",
+      "label": "Does not know she exists. If she did, it would confirm everything she left A.E.G.I.S. over"
+    },
+    {
+      "source": "riley-thomas-recluse",
+      "target": "riley-parasite-arc",
+      "type": "md_link"
+    },
+    {
+      "source": "riley-thomas-recluse",
+      "target": "casey-holt-scythe",
+      "type": "md_link"
+    },
+    {
+      "source": "riley-thomas-recluse",
+      "target": "adrian-vega-breakpoint",
+      "type": "md_link"
+    },
+    {
+      "source": "riley-thomas-recluse",
+      "target": "zara-thorne-filament",
+      "type": "md_link"
+    },
+    {
+      "source": "riley-thomas-recluse",
+      "target": "adrian-vega-/-breakpoint",
+      "type": "relationship",
+      "label": "Mentee, surrogate son, guilt made productive. The most tactically precise partnership in the Alliance network. Riley knows Adrian is dating someone named Casey — a nursing student, seems good for him. That is the extent of what he knows"
+    },
+    {
+      "source": "riley-thomas-recluse",
+      "target": "sloane-callahan-/-arachne",
+      "type": "relationship",
+      "label": "Handler/intel partner. She teases him mercilessly. He tolerates it and is quietly glad she's there"
+    },
+    {
+      "source": "riley-thomas-recluse",
+      "target": "paragon-/-ethan-roberts",
+      "type": "relationship",
+      "label": "Sponsor. Riley respects Ethan but chafes at the Boy Scout framing. Complicated admiration"
+    },
+    {
+      "source": "riley-thomas-recluse",
+      "target": "a.e.g.i.s.-medical",
+      "type": "relationship",
+      "label": "Active evasion. They would want to know about his decline. He will not tell them. He does not know they already do"
+    },
+    {
+      "source": "sloane-callahan-arachne",
+      "target": "riley-/-recluse",
+      "type": "relationship",
+      "label": "Handler and foil. She teases him; he rolls his eyes; neither would function as well without the other"
+    },
+    {
+      "source": "sloane-callahan-arachne",
+      "target": "adrian-/-breakpoint",
+      "type": "relationship",
+      "label": "Comfortable familiarity — they've been in the building at the same time enough that they have a rhythm. He doesn't touch her setup. She appreciates this more than she says"
+    },
+    {
+      "source": "sloane-callahan-arachne",
+      "target": "the-new-team",
+      "type": "relationship",
+      "label": "Assessing. Warmer than she's showing. Will decide quickly who she actually likes"
+    },
+    {
+      "source": "zara-thorne-filament",
+      "target": "riley-thomas-/-recluse",
+      "type": "relationship",
+      "label": "Complicated. Former partner (operational and possibly otherwise). Genetic entanglement means she is involuntarily aware of his physical state. Current dynamic: wary concern she is doing her best to manage. Intense attraction and tension, unresolved"
+    },
+    {
+      "source": "zara-thorne-filament",
+      "target": "recluse-network",
+      "type": "relationship",
+      "label": "Assists on her terms. Knows more of Riley's people than they know about her"
+    },
+    {
+      "source": "anonymous-signal",
+      "target": "signal",
+      "type": "md_link"
+    },
+    {
+      "source": "brackish-linus-peters",
+      "target": "evelyn-shaw-/-a.e.g.i.s.",
+      "type": "relationship",
+      "label": "Mutual recognition, mutual restraint. She has made a calculation. He knows she has"
+    },
+    {
+      "source": "brackish-linus-peters",
+      "target": "blackwater-harbor",
+      "type": "relationship",
+      "label": "He knows this water infrastructure better than anyone alive. Shroud's territory overlaps. They have not intersected"
+    },
+    {
+      "source": "caliber-deshawn-merritt",
+      "target": "casimir-vane",
+      "type": "relationship",
+      "label": "Employer. Deshawn has a professional relationship and a running private assessment of when this becomes untenable"
+    },
+    {
+      "source": "caliber-deshawn-merritt",
+      "target": "evelyn-shaw-/-a.e.g.i.s.",
+      "type": "relationship",
+      "label": "Mutual recognition, mutual restraint. She knows his name. He knows she's made a calculation about him"
+    },
+    {
+      "source": "caliber-deshawn-merritt",
+      "target": "riley-/-recluse",
+      "type": "relationship",
+      "label": "Have never met. Would recognize each other as the same kind of person immediately. This has not happened yet"
+    },
+    {
+      "source": "carter-williams",
+      "target": "carter-williams-renegade",
+      "type": "md_link"
+    },
+    {
+      "source": "casimir-vane",
+      "target": "casimir-vane",
+      "type": "md_link"
+    },
+    {
+      "source": "danielle-whittaker-wraith",
+      "target": "the-new-team",
+      "type": "relationship",
+      "label": "Unknown quantity encountered at the PROMETHEUS facility. Assessing"
+    },
+    {
+      "source": "danielle-whittaker-wraith",
+      "target": "sloane-/-arachne",
+      "type": "relationship",
+      "label": "Does not know Sloane is trying to identify her. Sloane does not know Dani is Wraith. This will resolve when it resolves"
+    },
+    {
+      "source": "danielle-whittaker-wraith",
+      "target": "a.e.g.i.s.",
+      "type": "relationship",
+      "label": "Actively hostile to agency interests. Has evaded identification so far"
+    },
+    {
+      "source": "danielle-whittaker-wraith",
+      "target": "her-parents",
+      "type": "relationship",
+      "label": "Complex. They built the machine that changed her. She has not fully decided what to do with that"
+    },
+    {
+      "source": "darkstar",
+      "target": "raze",
+      "type": "code_ref"
+    },
+    {
+      "source": "darkstar",
+      "target": "raze",
+      "type": "code_ref"
+    },
+    {
+      "source": "darkstar",
+      "target": "raze",
+      "type": "code_ref"
+    },
+    {
+      "source": "darkstar",
+      "target": "sterling-slate-/-cosmic-knight",
+      "type": "relationship",
+      "label": "His son. Engineered half-Umbraeon. Defected. Darkstar's interest in the new team runs through this"
+    },
+    {
+      "source": "darkstar",
+      "target": "raze",
+      "type": "relationship",
+      "label": "Engineered child. Vorrkai/Umbraeon hybrid. Was on a retrieval mission when the ship was destroyed. Now operating independently, assumes Darkstar dead. Full profile: `characters/npcs/raze.md`"
+    },
+    {
+      "source": "darkstar",
+      "target": "riley-thomas-/-recluse",
+      "type": "relationship",
+      "label": "Aware of. Has been monitoring Riley's parasite situation with interest. Not intervening — yet"
+    },
+    {
+      "source": "dr-cassius-vrell",
+      "target": "a.e.g.i.s.-/-acad",
+      "type": "relationship",
+      "label": "Forced separation. Mutual awareness, mutual restraint. They can't open the file on his retirement without opening files on themselves"
+    },
+    {
+      "source": "dr-cassius-vrell",
+      "target": "eclipse",
+      "type": "relationship",
+      "label": "Not affiliated. Eclipse has attempted contact twice. He declined. He knows what PROMETHEUS is and considers it intellectually sloppy"
+    },
+    {
+      "source": "dr-cassius-vrell",
+      "target": "dr.-priya-anand",
+      "type": "relationship",
+      "label": "Aware of her work. Has not made contact. Considers her the most rigorous active researcher in the city, which is a low bar he means as a genuine compliment"
+    },
+    {
+      "source": "eli-crane-fault",
+      "target": "petra-mace-/-sable",
+      "type": "relationship",
+      "label": "Partner. She ran the odds on him and came back three days in a row. He respects the methodology even though he's not entirely comfortable being someone else's calculated variable"
+    },
+    {
+      "source": "eli-crane-fault",
+      "target": "riley-/-recluse",
+      "type": "relationship",
+      "label": "Doesn't know Riley is watching. Riley has connected the structural failure pattern to a person he hasn't identified yet"
+    },
+    {
+      "source": "emmett-lorne",
+      "target": "joseph-persico",
+      "type": "relationship",
+      "label": "Persico is the face. Emmett is the architecture. Persico takes the arrests, the headlines, the heat. He does not fully understand how completely he answers to Emmett"
+    },
+    {
+      "source": "emmett-lorne",
+      "target": "casimir-vane",
+      "type": "relationship",
+      "label": "They know each other socially — two Ironworks success stories. Mutual respect, mutual suspicion, careful distance. Possibly overlapping interests; not allies"
+    },
+    {
+      "source": "emmett-lorne",
+      "target": "riley-/-recluse",
+      "type": "relationship",
+      "label": "Riley would smell this man from a mile away and still find himself being more charitable than intended in a direct conversation. Nothing provable. Everything wrong"
+    },
+    {
+      "source": "emmett-lorne",
+      "target": "a.e.g.i.s.",
+      "type": "relationship",
+      "label": "No file. No profile. The absence is deliberate — a man this embedded in Ironworks infrastructure for this long should have *something* on record. He doesn't"
+    },
+    {
+      "source": "gilt-nadia-osei",
+      "target": "eclipse",
+      "type": "relationship",
+      "label": "They want what she has. She doesn't know who they are yet"
+    },
+    {
+      "source": "gilt-nadia-osei",
+      "target": "signal",
+      "type": "relationship",
+      "label": "Possibly aware she exists and that she has something interesting"
+    },
+    {
+      "source": "gilt-nadia-osei",
+      "target": "sloane-/-arachne",
+      "type": "relationship",
+      "label": "Sloane's network has likely flagged Nadia's activity. They haven't intersected yet"
+    },
+    {
+      "source": "mason-matthews",
+      "target": "his-mother-(unnamed)",
+      "type": "relationship",
+      "label": "Master thief, currently in induced coma. Taught him to respect the work. Kept him out of the life. He used her tools anyway"
+    },
+    {
+      "source": "mason-matthews",
+      "target": "felicity-matthews",
+      "type": "relationship",
+      "label": "Younger sister. Age TBD. Leaves the porch light on. Mason doesn't let himself think about her during jobs"
+    },
+    {
+      "source": "mason-matthews",
+      "target": "adrian-vega",
+      "type": "relationship",
+      "label": "Close friend. Neither knows the other's secret. Adrian is [[Breakpoint]]"
+    },
+    {
+      "source": "mason-matthews",
+      "target": "the-fence",
+      "type": "relationship",
+      "label": "Current employer/creditor. Knows more about the Hargrave provenance dispute than Mason does. Potentially dangerous"
+    },
+    {
+      "source": "mason-matthews",
+      "target": "the-mob-contact",
+      "type": "relationship",
+      "label": "Inherited debt from his mother for services unrendered. Pressure source"
+    },
+    {
+      "source": "mayor-theo-alcantara",
+      "target": "director-evelyn-shaw",
+      "type": "relationship",
+      "label": "The relationship is professional and functional and neither of them trusts the other. Shaw briefs him on what A.E.G.I.S. decides he needs to know. He has never pushed back hard enough to find out what that filter looks like"
+    },
+    {
+      "source": "mayor-theo-alcantara",
+      "target": "senator-okafor",
+      "type": "relationship",
+      "label": "Genuine respect. Different instincts. She moves on principle; he moves on consensus. They are allies who occasionally frustrate each other"
+    },
+    {
+      "source": "mayor-theo-alcantara",
+      "target": "chief-hector-reyes",
+      "type": "relationship",
+      "label": "The working relationship the city actually runs on. They have been navigating A.E.G.I.S. jurisdictional overreach together since the 2010 restructuring"
+    },
+    {
+      "source": "morgan-vale-nightfall",
+      "target": "jason-/-apollo",
+      "type": "relationship",
+      "label": "Killed his partner. Knows it. Has not looked away from it. Watching him hold both powers with something that is not quite guilt and not quite awe. The relationship — if there is one — is entirely his to define"
+    },
+    {
+      "source": "morgan-vale-nightfall",
+      "target": "artemis-/-mary-matthews",
+      "type": "relationship",
+      "label": "Deceased. Morgan does not have clean feelings about this"
+    },
+    {
+      "source": "morgan-vale-nightfall",
+      "target": "the-team",
+      "type": "relationship",
+      "label": "Unknown quantity. Approaching with open hands. Not expecting trust"
+    },
+    {
+      "source": "morgan-vale-nightfall",
+      "target": "a.e.g.i.s.",
+      "type": "relationship",
+      "label": "Active threat classification. Uncontained. Not currently a priority compared to Signal and Eclipse"
+    },
+    {
+      "source": "petra-mace-sable",
+      "target": "eli-crane-/-fault",
+      "type": "relationship",
+      "label": "Partner. She sought him out, calculated he'd say yes, and was right. That dynamic hasn't fully resolved — he knows she ran the odds on him and isn't sure how he feels about it"
+    },
+    {
+      "source": "petra-mace-sable",
+      "target": "mateo-mace",
+      "type": "relationship",
+      "label": "Younger brother. The reason this started. He doesn't know what she's doing"
+    },
+    {
+      "source": "petra-mace-sable",
+      "target": "riley-/-recluse",
+      "type": "relationship",
+      "label": "Doesn't know he exists yet as a specific threat. Riley has noticed the pattern she's leaving"
+    },
+    {
+      "source": "petra-mace-sable",
+      "target": "sloane-/-arachne",
+      "type": "relationship",
+      "label": "Doesn't know Sloane exists. Sloane has flagged her interference signature without knowing whose it is"
+    },
+    {
+      "source": "police-chief-hector-reyes",
+      "target": "mayor-alcantara",
+      "type": "relationship",
+      "label": "The working relationship. He briefs the mayor; the mayor sets the political parameters; Reyes runs the department inside them"
+    },
+    {
+      "source": "police-chief-hector-reyes",
+      "target": "director-evelyn-shaw",
+      "type": "relationship",
+      "label": "Controlled mutual frustration. Shaw sees HCPD as a resource and a PR constraint. Reyes sees A.E.G.I.S. as a federal interest wearing a public safety costume. Both are occasionally right"
+    },
+    {
+      "source": "police-chief-hector-reyes",
+      "target": "the-team",
+      "type": "relationship",
+      "label": "He knows who they are. He has not arrested any of them. He will not go out of his way to help them either. The line for him is whether their activity creates bodies he has to account for"
+    },
+    {
+      "source": "raze",
+      "target": "darkstar",
+      "type": "relationship",
+      "label": "Father, creator, purpose. Assumed dead. The loss has not destabilized Raze's mission — it has freed him from any restraint Darkstar's continued existence would have imposed"
+    },
+    {
+      "source": "raze",
+      "target": "sterling-slate-/-cosmic-knight",
+      "type": "relationship",
+      "label": "Half-sibling. The apostate. The mission that became a revenge plot. Raze does not hate Sterling the way a person hates an enemy — he hates him the way a believer hates a heretic. The distinction matters"
+    },
+    {
+      "source": "raze",
+      "target": "other-darkstar-children",
+      "type": "relationship",
+      "label": "Unknown to Raze's current status on Earth. The sibling network has no coordinating figure now that Darkstar is assumed dead"
+    },
+    {
+      "source": "red-pill-owen-watson",
+      "target": "red-pill-owen-watson",
+      "type": "md_link"
+    },
+    {
+      "source": "remnant",
+      "target": "marcus-harrow-/-shroud",
+      "type": "relationship",
+      "label": "Being tracked. Aware of surveillance. Has not determined threat level yet"
+    },
+    {
+      "source": "remnant",
+      "target": "joseph-persico's-network",
+      "type": "relationship",
+      "label": "Operational relationship through current host's position. Does not know what Calloway actually is"
+    },
+    {
+      "source": "remnant",
+      "target": "a.e.g.i.s.",
+      "type": "relationship",
+      "label": "File closed in 2014. No active interest"
+    },
+    {
+      "source": "senator-diana-okafor",
+      "target": "the-players",
+      "type": "relationship",
+      "label": "She has now been in the room when things went wrong. That is a foundation, not a ceiling"
+    },
+    {
+      "source": "senator-diana-okafor",
+      "target": "director-evelyn-shaw",
+      "type": "relationship",
+      "label": "Professional respect, deep mutual wariness. Shaw sees Okafor as a useful moderating voice she cannot fully control"
+    },
+    {
+      "source": "senator-diana-okafor",
+      "target": "paragon-/-ethan-roberts",
+      "type": "relationship",
+      "label": "Has met him twice. Thinks he is a good man carrying too much weight. Has never said this to him"
+    },
+    {
+      "source": "slake-barry-black",
+      "target": "augie-ferreira",
+      "type": "relationship",
+      "label": "Knew Barry by name for a decade. Has been leaving food at Pier 11. Does not yet know what he's feeding"
+    },
+    {
+      "source": "slake-barry-black",
+      "target": "eclipse",
+      "type": "relationship",
+      "label": "Responsible for what he is. Unaware he exists"
+    },
+    {
+      "source": "slake-barry-black",
+      "target": "persico's-network",
+      "type": "relationship",
+      "label": "The disposal operation that spilled the waste was Persico-adjacent. Indirect culpability"
+    },
+    {
+      "source": "slake-barry-black",
+      "target": "local-44-records",
+      "type": "relationship",
+      "label": "His employment file, his missing persons report, and his work assignment to Pier 11 in late 2022 are all in the union records — including the boxes on the Hall's third floor"
+    },
+    {
+      "source": "the-conductor-elliot-marsh",
+      "target": "signal",
+      "type": "relationship",
+      "label": "Possibly in contact. Terms unknown. This is the relationship that determines his threat level"
+    },
+    {
+      "source": "the-conductor-elliot-marsh",
+      "target": "sloane-/-arachne",
+      "type": "relationship",
+      "label": "The one person in Halden City whose surveillance capability approaches his. They have been circling each other's operational edges for a year without direct contact"
+    },
+    {
+      "source": "the-conductor-elliot-marsh",
+      "target": "a.e.g.i.s.-/-seib",
+      "type": "relationship",
+      "label": "They know a brokerage exists. They do not have a name. Dr. Kadeem has flagged it as a priority identification target"
+    },
+    {
+      "source": "jason-apollo",
+      "target": "the-wavelengths",
+      "type": "md_link"
+    },
+    {
+      "source": "jason-apollo",
+      "target": "morgan-vale-nightfall",
+      "type": "md_link"
+    },
+    {
+      "source": "jason-apollo",
+      "target": "lily-matthews",
+      "type": "md_link"
+    },
+    {
+      "source": "jason-apollo",
+      "target": "jason-lily-matthews-scene",
+      "type": "md_link"
+    },
+    {
+      "source": "key-npcs",
+      "target": "riley-thomas-recluse",
+      "type": "code_ref"
+    },
+    {
+      "source": "key-npcs",
+      "target": "ethan-roberts-paragon",
+      "type": "code_ref"
+    },
+    {
+      "source": "key-npcs",
+      "target": "sloane-callahan-arachne",
+      "type": "code_ref"
+    },
+    {
+      "source": "key-npcs",
+      "target": "lila-ortega-manifest",
+      "type": "code_ref"
+    },
+    {
+      "source": "key-npcs",
+      "target": "anonymous-signal",
+      "type": "code_ref"
+    },
+    {
+      "source": "key-npcs",
+      "target": "signal",
+      "type": "code_ref"
+    },
+    {
+      "source": "key-npcs",
+      "target": "casey-holt-scythe",
+      "type": "code_ref"
+    },
+    {
+      "source": "districts",
+      "target": "hq-ironworkers-hall",
+      "type": "code_ref"
+    },
+    {
+      "source": "districts",
+      "target": "alliance-tower",
+      "type": "code_ref"
+    },
+    {
+      "source": "lore",
+      "target": "world-history",
+      "type": "code_ref"
+    },
+    {
+      "source": "lore",
+      "target": "metahuman-taxonomy",
+      "type": "code_ref"
+    },
+    {
+      "source": "overview",
+      "target": "halden-city-map",
+      "type": "md_link"
+    },
+    {
+      "source": "player-characters",
+      "target": "avi-park-nova",
+      "type": "code_ref"
+    },
+    {
+      "source": "player-characters",
+      "target": "jason-apollo",
+      "type": "code_ref"
+    },
+    {
+      "source": "player-characters",
+      "target": "sterling-slate-cosmic-knight",
+      "type": "code_ref"
+    },
+    {
+      "source": "player-characters",
+      "target": "rhys-romneya-noc",
+      "type": "code_ref"
+    },
+    {
+      "source": "player-characters",
+      "target": "casper-curie-half-life",
+      "type": "code_ref"
+    },
+    {
+      "source": "gm-quick-ref",
+      "target": "riley-thomas-recluse",
+      "type": "code_ref"
+    },
+    {
+      "source": "gm-quick-ref",
+      "target": "anonymous-signal",
+      "type": "code_ref"
+    },
+    {
+      "source": "gm-quick-ref",
+      "target": "signal",
+      "type": "code_ref"
+    },
+    {
+      "source": "gm-quick-ref",
+      "target": "casey-holt-scythe",
+      "type": "code_ref"
+    },
+    {
+      "source": "gm-quick-ref",
+      "target": "edmund-crale",
+      "type": "code_ref"
+    },
+    {
+      "source": "gm-quick-ref",
+      "target": "lila-ortega-manifest",
+      "type": "code_ref"
+    },
+    {
+      "source": "gm-quick-ref",
+      "target": "lily-matthews",
+      "type": "code_ref"
+    },
+    {
+      "source": "gm-quick-ref",
+      "target": "carter-williams",
+      "type": "code_ref"
+    },
+    {
+      "source": "gm-quick-ref",
+      "target": "raze",
+      "type": "code_ref"
+    },
+    {
+      "source": "gm-quick-ref",
+      "target": "casimir-vane",
+      "type": "code_ref"
+    },
+    {
+      "source": "gm-quick-ref",
+      "target": "zara-thorne-filament",
+      "type": "code_ref"
+    },
+    {
+      "source": "gm-quick-ref",
+      "target": "darcy-cole-rampart",
+      "type": "code_ref"
+    },
+    {
+      "source": "gm-quick-ref",
+      "target": "adrian-vega-breakpoint",
+      "type": "code_ref"
+    },
+    {
+      "source": "carter-williams-renegade",
+      "target": "carter-williams",
+      "type": "md_link"
+    },
+    {
+      "source": "casimir-vane",
+      "target": "casimir-vane",
+      "type": "md_link"
+    },
+    {
+      "source": "red-pill-owen-watson",
+      "target": "red-pill-owen-watson",
+      "type": "md_link"
+    },
+    {
+      "source": "signal",
+      "target": "signal",
+      "type": "md_link"
+    },
+    {
+      "source": "who-decides-arc",
+      "target": "avi-park-nova",
+      "type": "code_ref"
+    },
+    {
+      "source": "story-status",
+      "target": "who-decides-arc",
+      "type": "code_ref"
+    },
+    {
+      "source": "story-status",
+      "target": "open-threads",
+      "type": "code_ref"
+    }
+  ]
+}
