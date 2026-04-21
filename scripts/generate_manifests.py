@@ -17,8 +17,8 @@ import shutil
 from pathlib import Path
 from collections import defaultdict
 
-VAULT_DIR = Path("/root/second-brain-vault/domains/worldbuilding/halden-city")
-OUTPUT_DIR = Path("/root/world-kaleb-one/public")
+VAULT_DIR = Path(os.environ.get("VAULT_DIR", "/root/second-brain-vault/domains/worldbuilding/halden-city"))
+OUTPUT_DIR = Path(os.environ.get("OUTPUT_DIR", "/root/world-kaleb-one/public"))
 
 IMAGE_EXTENSIONS = [".jpg", ".jpeg", ".png", ".webp"]
 PORTRAIT_SECTIONS = {"pcs", "alliance", "npcs"}
@@ -89,7 +89,7 @@ def extract_description(body, max_len=200):
         lambda l: l.strip() == "---",
         lambda l: l.startswith("-") or l.startswith("* "),
         lambda l: bool(re.match(r"^\d+\.", l)),
-        lambda l: l.startswith(">"),
+        lambda l: l.startswith("›"),
         lambda l: l.startswith("![") or l.startswith("["),
         lambda l: l.startswith("**") and l.upper() == l and "**" in l[2:],
         lambda l: len(l.strip()) == 0,
