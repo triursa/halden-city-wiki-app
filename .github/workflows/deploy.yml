@@ -1,23 +1,59 @@
-name: Deploy to Cloudflare Pages
+name: Regenerate manifests from vault & deploy
 
 on:
+  workflow_dispatch:
+  repository_dispatch:
+    types: [rebuild-wiki]
   push:
     branches: [main]
-  workflow_dispatch:
+    paths: ['scripts/**', '.github/workflows/deploy.yml']
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: '22'
           cache: 'npm'
 
-      - name: Install dependencies
+      - name: Checkout vault (sparse)
+        uses: actions/checkout@v4
+        with:
+          repository: triursa/second-brain-vault
+          token: ${{ secrets.REPO_PAT }}
+          path: vault
+          sparse-checkout: |
+            domains/worldbuilding/halden-city
+
+      - name: Regenerate manifests
+        run: |
+          pip install pyyaml  # if needed, though current script is stdlib only
+          python3 scripts/generate_manifests.py
+        env:
+          VAULT_DIR: ${{ github.workspace }}/vault/domains/worldbuilding/halden-city
+          OUTPUT_DIR: ${{ github.workspace }}/public
+
+      - name: Commit updated assets
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A public/
+          git add manifest-*.json 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "No asset changes."
+          else
+            git commit -m "auto: sync vault assets [skip ci]"
+            git push
+          fi
+
+      - name: Install deps
         run: npm ci
 
       - name: Build
