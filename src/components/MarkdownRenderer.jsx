@@ -240,7 +240,7 @@ function renderTable(lines, onWikilink, key) {
         </thead>
         <tbody>
           {body.map((row, ri) => (
-            <tr key={ri} className="border-b border-[rgba(255,255,255,0.04)]">
+            <tr key={ri} className="border-b border-[var(--glass-bg)]">
               {row.map((cell, ci) => (
                 <td key={ci} className="py-2 px-3 text-[var(--text-secondary)]">
                   {inlineFormat(cell, onWikilink)}

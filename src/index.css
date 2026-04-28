@@ -3,30 +3,40 @@
 /* ── Liquid Glass Design System ──────────────────────────────────────── */
 
 :root {
-  --glass-bg: rgba(255, 255, 255, 0.06);
-  --glass-bg-hover: rgba(255, 255, 255, 0.10);
-  --glass-bg-active: rgba(255, 255, 255, 0.14);
-  --glass-border: rgba(255, 255, 255, 0.12);
-  --glass-border-hover: rgba(255, 255, 255, 0.22);
+  /* M3 Obsidian base tokens from theme-obsidian.css */
+  
+  /* Per-domain accent override */
+  --md-sys-color-primary: #8b5cf6;
+  
+  /* Glass surface aliases → M3 tokens */
+  --glass-bg: var(--md-sys-color-surface-container);
+  --glass-bg-hover: var(--md-sys-color-surface-container-high);
+  --glass-bg-active: var(--md-sys-color-surface-container-high);
+  --glass-border: var(--md-sys-color-outline-variant);
+  --glass-border-hover: var(--md-sys-color-outline);
   --glass-glow: rgba(139, 92, 246, 0.15);
   --glass-glow-strong: rgba(139, 92, 246, 0.30);
 
-  --bg-primary: #0a0a0f;
-  --bg-secondary: #111118;
-  --bg-tertiary: #1a1a24;
+  /* Background aliases */
+  --bg-primary: var(--md-sys-color-surface);
+  --bg-secondary: var(--md-sys-color-surface-container);
+  --bg-tertiary: var(--md-sys-color-surface-container-high);
 
-  --text-primary: #f0eef5;
-  --text-secondary: #a8a4b8;
-  --text-dim: #6b6880;
+  /* Text aliases */
+  --text-primary: var(--md-sys-color-on-surface);
+  --text-secondary: var(--md-sys-color-on-surface-variant);
+  --text-dim: var(--md-sys-color-on-surface-variant);
 
-  --accent: #8b5cf6;
-  --accent-dim: #6d28d9;
+  /* Accent aliases */
+  --accent: var(--md-sys-color-primary);
+  --accent-dim: var(--md-sys-color-primary-container);
   --accent-glow: rgba(139, 92, 246, 0.4);
 
+  /* Layout tokens (unchanged) */
   --sidebar-width: 280px;
   --header-height: 60px;
 
-  /* Section colors */
+  /* Section colors (semantic, not theme tokens) */
   --section-pcs: #f59e0b;
   --section-alliance: #3b82f6;
   --section-npcs: #10b981;
@@ -96,8 +106,7 @@ a:hover {
 /* GlassPanel — the core component */
 .glass-panel {
   background: var(--glass-bg);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  /* M3: removed backdrop-filter */
   border: 1px solid var(--glass-border);
   border-radius: 12px;
   transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
@@ -244,7 +253,7 @@ mark.search-highlight {
 /* Glass Button */
 .glass-btn {
   background: var(--glass-bg);
-  backdrop-filter: blur(12px);
+  /* M3: removed backdrop-filter */
   border: 1px solid var(--glass-border);
   border-radius: 8px;
   color: var(--text-primary);
@@ -290,6 +299,48 @@ mark.search-highlight {
 /* Mobile responsive */
 @media (max-width: 768px) {
   :root {
-    --sidebar-width: 100%;
-  }
+  /* M3 Obsidian base tokens from theme-obsidian.css */
+  
+  /* Per-domain accent override */
+  --md-sys-color-primary: #8b5cf6;
+  
+  /* Glass surface aliases → M3 tokens */
+  --glass-bg: var(--md-sys-color-surface-container);
+  --glass-bg-hover: var(--md-sys-color-surface-container-high);
+  --glass-bg-active: var(--md-sys-color-surface-container-high);
+  --glass-border: var(--md-sys-color-outline-variant);
+  --glass-border-hover: var(--md-sys-color-outline);
+  --glass-glow: rgba(139, 92, 246, 0.15);
+  --glass-glow-strong: rgba(139, 92, 246, 0.30);
+
+  /* Background aliases */
+  --bg-primary: var(--md-sys-color-surface);
+  --bg-secondary: var(--md-sys-color-surface-container);
+  --bg-tertiary: var(--md-sys-color-surface-container-high);
+
+  /* Text aliases */
+  --text-primary: var(--md-sys-color-on-surface);
+  --text-secondary: var(--md-sys-color-on-surface-variant);
+  --text-dim: var(--md-sys-color-on-surface-variant);
+
+  /* Accent aliases */
+  --accent: var(--md-sys-color-primary);
+  --accent-dim: var(--md-sys-color-primary-container);
+  --accent-glow: rgba(139, 92, 246, 0.4);
+
+  /* Layout tokens (unchanged) */
+  --sidebar-width: 280px;
+  --header-height: 60px;
+
+  /* Section colors (semantic, not theme tokens) */
+  --section-pcs: #f59e0b;
+  --section-alliance: #3b82f6;
+  --section-npcs: #10b981;
+  --section-factions: #ef4444;
+  --section-locations: #06b6d4;
+  --section-lore: #a855f7;
+  --section-plot: #f97316;
+  --section-villains: #dc2626;
+  --section-meta: #6b7280;
+}
 }

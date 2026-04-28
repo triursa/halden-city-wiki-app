@@ -78,7 +78,7 @@ export default function EntryPage() {
         {file.tags?.length > 1 && (
           <div className="flex flex-wrap gap-1.5 mt-2">
             {file.tags.filter(t => t !== 'halden-city').map(tag => (
-              <span key={tag} className="text-xs px-2 py-0.5 rounded bg-[rgba(255,255,255,0.06)] text-[var(--text-dim)]">
+              <span key={tag} className="text-xs px-2 py-0.5 rounded bg-[var(--glass-bg)] text-[var(--text-dim)]">
                 {tag}
               </span>
             ))}
@@ -150,7 +150,7 @@ export default function EntryPage() {
               </thead>
               <tbody>
                 {file.relationships.map((rel, i) => (
-                  <tr key={i} className="border-b border-[rgba(255,255,255,0.04)]">
+                  <tr key={i} className="border-b border-[var(--glass-bg)]">
                     <td className="py-2 px-4">
                       <button
                         className="wikilink resolved"

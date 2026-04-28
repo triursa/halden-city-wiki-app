@@ -47,7 +47,7 @@ export default function Card({ file }) {
               {file.tags.filter(t => t !== 'halden-city').slice(0, 3).map(tag => (
                 <span
                   key={tag}
-                  className="text-[10px] px-1.5 py-0.5 rounded bg-[rgba(255,255,255,0.06)] text-[var(--text-dim)]"
+                  className="text-[10px] px-1.5 py-0.5 rounded bg-[var(--glass-bg)] text-[var(--text-dim)]"
                 >
                   {tag}
                 </span>
