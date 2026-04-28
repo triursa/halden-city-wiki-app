@@ -22,7 +22,7 @@ export default function Layout({ children }) {
       {/* Main content area */}
       <div className="md:ml-[280px] min-h-screen">
         {/* Top bar */}
-        <header className="sticky top-0 z-30 backdrop-blur-xl bg-[rgba(10,10,15,0.8)] border-b border-[var(--glass-border)]">
+        <header className="sticky top-0 z-30 bg-[var(--md-sys-color-surface-container)] border-b border-[var(--glass-border)]">
           <div className="flex items-center gap-3 px-4 py-3">
             {/* Mobile hamburger */}
             <button
