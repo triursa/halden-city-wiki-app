@@ -15,15 +15,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Checkout vault (sparse)
-        uses: actions/checkout@v4
-        if: vars.VAULT_CHECKOUT_ENABLED == 'true'
-        with:
-          repository: triursa/second-brain-vault
-          token: ${{ secrets.REPO_PAT }}
-          path: vault
-          sparse-checkout: |
-            domains/worldbuilding/halden-city
+      - name: Fetch vault content (halden-city)
+        env:
+          GH_TOKEN: ${{ secrets.REPO_PAT }}
+        run: |
+          curl -sL -H "Authorization: Bearer $GH_TOKEN" \
+            -o vault.tar.gz \
+            "https://api.github.com/repos/triursa/second-brain-vault/tarball/master"
+          mkdir -p vault
+          tar xzf vault.tar.gz --strip-components=1 -C vault
+          rm vault.tar.gz
+          echo "Vault halden-city contents:"
+          ls -la vault/domains/worldbuilding/halden-city/
 
       - uses: actions/setup-node@v4
         with:
@@ -33,7 +36,6 @@ jobs:
       - run: npm ci
 
       - name: Set VAULT_DIR
-        if: vars.VAULT_CHECKOUT_ENABLED == 'true'
         run: echo "VAULT_DIR=${{ github.workspace }}/vault/domains/worldbuilding/halden-city" >> "$GITHUB_ENV"
 
       - run: npm run build
