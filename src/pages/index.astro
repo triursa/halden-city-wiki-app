@@ -1,0 +1,97 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CardGrid from '../components/CardGrid.astro';
+import { SECTIONS } from '../config/sections';
+import { getCollection } from 'astro:content';
+import graphData from '../data/graph.json';
+
+// Compute file counts per section
+const allEntries = await getCollection('entries');
+const fileCounts: Record<string, number> = {};
+
+for (const section of SECTIONS) {
+  // Count entries whose id starts with the section subfolder
+  const count = allEntries.filter((entry) => {
+    const id = entry.id;
+    // Remove leading ./ if present
+    const cleanId = id.replace(/^\.\//, '');
+    return cleanId.startsWith(section.subfolder + '/');
+  }).length;
+  fileCounts[section.key] = count;
+}
+
+// Quick-ref root files
+const rootFiles = await getCollection('root');
+const quickRefItems = rootFiles.map((f) => ({
+  title: f.data.title || f.id.replace(/\.md$/, '').replace(/-/g, ' '),
+  href: `/root/${f.id.replace(/\.md$/, '')}`,
+}));
+---
+
+<BaseLayout title="Halden City Wiki" domain="masks" fileCounts={fileCounts}>
+  <section class="hero">
+    <h1>Halden City Wiki</h1>
+    <p class="hero-subtitle">
+      A browsable, cross-referenced worldbuilding wiki for the Halden City superhero setting.
+      Built with Astro + M3 Obsidian.
+    </p>
+  </section>
+
+  <section class="search-section">
+    <div id="search"></div>
+  </section>
+
+  <section class="sections-grid">
+    <h2 style="margin-bottom: 1rem;">Sections</h2>
+    <div class="section-cards">
+      {SECTIONS.map((section) => (
+        <a
+          href={`/${section.key}`}
+          class="section-card"
+          style={`--section-color: ${section.color}`}
+        >
+          <span class="section-icon">{section.icon}</span>
+          <div class="section-info">
+            <div class="section-label">{section.label}</div>
+            <div class="section-count">{fileCounts[section.key] || 0} entries</div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  {quickRefItems.length > 0 && (
+    <section class="quick-ref">
+      <h3>Quick Reference</h3>
+      <CardGrid items={quickRefItems} />
+    </section>
+  )}
+</BaseLayout>
+
+<script is:inline src="/pagefind/pagefind-ui.js"></script>
+<link rel="stylesheet" href="/pagefind/pagefind-ui.css">
+<link rel="stylesheet" href="/pagefind-swatch.css">
+
+<script is:inline>
+  window.addEventListener('DOMContentLoaded', () => {
+    if (typeof PagefindUI !== 'undefined') {
+      new PagefindUI({
+        element: '#search',
+        showSubResults: true,
+        showImages: false,
+      });
+    }
+  });
+</script>
+
+<style>
+  .sections-grid {
+    margin-top: 2rem;
+  }
+
+  .section-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+</style>

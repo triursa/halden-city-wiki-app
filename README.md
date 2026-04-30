@@ -1,16 +1,48 @@
-# React + Vite
+# Halden City Wiki — masks.kaleb.one
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A browsable, cross-referenced worldbuilding wiki for the Halden City superhero setting. Built with Astro 6, M3 Obsidian theme, and Pagefind full-text search.
 
-Currently, two official plugins are available:
+## Architecture
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Astro 6** — Static site generator, zero JS on content pages
+- **@kaleb-one/theme** — M3 Obsidian design system
+- **remark-obsidian** — Wikilink parsing from Obsidian-flavored markdown
+- **Pagefind** — Client-side full-text search index
+- **Cloudflare Pages** — Deployment target
 
-## React Compiler
+## Content Source
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Content lives in the `second-brain-vault` repository (external). The build reads from `VAULT_DIR` (default: `../second-brain-vault/domains/worldbuilding/halden-city`).
 
-## Expanding the ESLint configuration
+## Sections
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Key | Label | Subfolder |
+|---|---|---|
+| pcs | Player Characters | characters/pcs |
+| alliance | The Alliance | characters/alliance |
+| npcs | NPCs | characters/npcs |
+| factions | Factions | factions |
+| locations | Locations | locations |
+| lore | Lore | lore |
+| plot | Plot | plot |
+| villains | Villains | plot/villain-sheets |
+| meta | Meta | meta |
+
+## Development
+
+```bash
+npm install
+npm run dev
+```
+
+## Build
+
+```bash
+npm run build
+```
+
+This runs the graph builder first, then Astro build, then Pagefind index.
+
+## Deployment
+
+Push to `main` → GitHub Actions → Cloudflare Pages (project: `masks-wiki`).

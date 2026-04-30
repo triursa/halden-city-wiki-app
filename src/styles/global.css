@@ -1,0 +1,448 @@
+@import "@kaleb-one/theme/css/obsidian";
+
+/*
+ * masks.kaleb.one — Halden City Wiki Styles
+ *
+ * M3 base from @kaleb-one/theme. Domain accent overrides below.
+ */
+
+:root {
+  /* Shorthand aliases → M3 tokens (zero-breakage pattern) */
+  --bg: var(--md-sys-color-surface);
+  --bg-surface: var(--md-sys-color-surface-container-low);
+  --bg-elevated: var(--md-sys-color-surface-container);
+  --bg-card: var(--md-sys-color-surface-container-low);
+  --accent: var(--md-sys-color-primary);
+  --accent-dim: var(--md-sys-color-primary-container);
+  --text-primary: var(--md-sys-color-on-surface);
+  --text-secondary: var(--md-sys-color-on-surface-variant);
+  --text-muted: var(--md-sys-color-outline);
+  --border: var(--md-sys-color-outline-variant);
+  --border-hover: var(--md-sys-color-outline);
+  --radius: var(--md-sys-shape-corner-medium);
+  --radius-sm: var(--md-sys-shape-corner-small);
+  --radius-lg: var(--md-sys-shape-corner-large);
+  --transition: var(--md-sys-motion-duration-medium2) var(--md-sys-motion-easing-standard);
+
+  /* Section accent — set via data-section attribute */
+  --section-color: var(--md-sys-color-primary);
+}
+
+/* === Section accent overrides === */
+[data-section="pcs"]       { --section-color: #4fc3f7; }
+[data-section="alliance"]  { --section-color: #81c784; }
+[data-section="npcs"]      { --section-color: #ffb74d; }
+[data-section="factions"]  { --section-color: #e57373; }
+[data-section="locations"] { --section-color: #64b5f6; }
+[data-section="lore"]      { --section-color: #ba68c8; }
+[data-section="plot"]      { --section-color: #f06292; }
+[data-section="villains"]  { --section-color: #ef5350; }
+[data-section="meta"]      { --section-color: #90a4ae; }
+
+/* === Reset === */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* === Base Layout === */
+html[data-theme="obsidian"] {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--md-sys-font-family-body, 'Inter', system-ui, sans-serif);
+  background-color: var(--md-sys-color-surface);
+  color: var(--md-sys-color-on-surface);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* === Typography === */
+h1, h2, h3, h4 {
+  font-family: var(--md-sys-font-family-display, 'Inter', system-ui, sans-serif);
+  color: var(--md-sys-color-on-surface);
+  line-height: 1.3;
+}
+
+h1 { font-size: 2rem; margin-bottom: 1rem; }
+h2 { font-size: 1.375rem; margin-top: 2rem; margin-bottom: 0.5rem; }
+h3 { font-size: 1rem; margin-top: 1.5rem; margin-bottom: 0.375rem; }
+
+p { margin-bottom: 1rem; }
+
+a {
+  color: var(--md-sys-color-primary);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+a:hover { color: var(--md-sys-color-on-primary-container); }
+
+/* === Lists === */
+ul, ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* === M3 Elevation === */
+.md-elevation-1 { box-shadow: var(--md-sys-elevation-1); }
+.md-elevation-2 { box-shadow: var(--md-sys-elevation-2); }
+.md-elevation-3 { box-shadow: var(--md-sys-elevation-3); }
+.md-elevation-4 { box-shadow: var(--md-sys-elevation-4); }
+.md-elevation-5 { box-shadow: var(--md-sys-elevation-5); }
+
+/* === Code blocks === */
+code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.875em;
+  background: var(--md-sys-color-surface-container);
+  padding: 0.125rem 0.375rem;
+  border-radius: var(--md-sys-shape-corner-small);
+}
+
+pre {
+  background: var(--md-sys-color-surface-container);
+  border: 1px solid var(--md-sys-color-outline-variant);
+  border-radius: var(--md-sys-shape-corner-medium);
+  padding: 1rem;
+  overflow-x: auto;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+pre code { background: none; padding: 0; }
+
+/* === Blockquote === */
+blockquote {
+  border-left: 3px solid var(--md-sys-color-primary);
+  padding-left: 1rem;
+  margin: 1rem 0;
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+/* === Tables === */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+th, td {
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--md-sys-color-outline-variant);
+}
+
+th {
+  font-weight: 600;
+  color: var(--md-sys-color-on-surface);
+  background: var(--md-sys-color-surface-container-low);
+}
+
+tr:hover td {
+  background: var(--md-sys-color-surface-container);
+}
+
+/* === Cards === */
+.card {
+  background: var(--md-sys-color-surface-container-low);
+  border: 1px solid var(--md-sys-color-outline-variant);
+  border-radius: var(--md-sys-shape-corner-medium);
+  padding: 1rem;
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow var(--transition), border-color var(--transition);
+}
+
+.card:hover {
+  box-shadow: var(--md-sys-elevation-2);
+  border-color: var(--md-sys-color-outline);
+}
+
+/* === Obsidian Wikilinks === */
+.obsidian-link {
+  color: var(--md-sys-color-primary);
+  text-decoration: none;
+  border-bottom: 1px dashed var(--md-sys-color-outline);
+  transition: border-color var(--transition);
+}
+
+.obsidian-link:hover {
+  border-bottom-style: solid;
+  border-color: var(--md-sys-color-primary);
+}
+
+.obsidian-link.broken {
+  color: var(--md-sys-color-error);
+  border-color: var(--md-sys-color-error);
+}
+
+/* === Pagefind === */
+.pagefind-ui__search-input {
+  background: var(--md-sys-color-surface-container) !important;
+  border: 1px solid var(--md-sys-color-outline-variant) !important;
+  color: var(--md-sys-color-on-surface) !important;
+  border-radius: var(--md-sys-shape-corner-medium) !important;
+}
+
+.pagefind-ui__search-input:focus {
+  border-color: var(--md-sys-color-primary) !important;
+  outline: 2px solid var(--md-sys-color-primary-container) !important;
+}
+
+/* =============================================
+   MASKS-SPECIFIC STYLES
+   ============================================= */
+
+/* === Section Card (home page) === */
+.section-card {
+  background: var(--md-sys-color-surface-container-low);
+  border: 1px solid var(--md-sys-color-outline-variant);
+  border-left: 4px solid var(--section-color);
+  border-radius: var(--md-sys-shape-corner-medium);
+  padding: 1.25rem 1rem;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: box-shadow var(--transition), border-color var(--transition);
+}
+
+.section-card:hover {
+  box-shadow: var(--md-sys-elevation-2);
+  border-color: var(--md-sys-color-outline);
+}
+
+.section-card .section-icon {
+  font-size: 1.75rem;
+  width: 2.5rem;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.section-card .section-info {
+  flex: 1;
+}
+
+.section-card .section-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--section-color);
+}
+
+.section-card .section-count {
+  font-size: 0.8125rem;
+  color: var(--md-sys-color-on-surface-variant);
+  margin-top: 0.125rem;
+}
+
+/* === Portraits === */
+.portrait-row {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  flex-wrap: wrap;
+}
+
+.portrait {
+  flex: 1;
+  min-width: 200px;
+  max-width: 400px;
+}
+
+.portrait img {
+  width: 100%;
+  border-radius: var(--md-sys-shape-corner-medium);
+  border: 2px solid var(--md-sys-color-outline-variant);
+  object-fit: cover;
+  aspect-ratio: 3/4;
+}
+
+.portrait figcaption {
+  font-size: 0.75rem;
+  color: var(--md-sys-color-on-surface-variant);
+  text-align: center;
+  margin-top: 0.375rem;
+}
+
+/* === Scene Image === */
+.scene-image {
+  margin: 1.5rem 0;
+  border-radius: var(--md-sys-shape-corner-large);
+  overflow: hidden;
+  border: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.scene-image img {
+  width: 100%;
+  display: block;
+}
+
+/* === Relationships Table === */
+.relationships-section {
+  margin-top: 2rem;
+}
+
+.relationships-section h2 {
+  color: var(--section-color);
+  border-bottom: 2px solid var(--section-color);
+  padding-bottom: 0.375rem;
+}
+
+.relationships-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+}
+
+.relationships-table th {
+  text-align: left;
+  font-weight: 600;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 2px solid var(--section-color);
+  background: transparent;
+  color: var(--section-color);
+}
+
+.relationships-table td {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.relationships-table tr:hover td {
+  background: var(--md-sys-color-surface-container);
+}
+
+/* === Backlinks === */
+.backlinks-section {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.backlinks-section h3 {
+  font-size: 0.9375rem;
+  color: var(--md-sys-color-on-surface-variant);
+  margin-bottom: 0.5rem;
+}
+
+.backlinks-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.backlink-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.75rem;
+  background: var(--md-sys-color-primary-container);
+  color: var(--md-sys-color-on-primary-container);
+  border-radius: var(--md-sys-shape-corner-small);
+  font-size: 0.8125rem;
+  text-decoration: none;
+  transition: background var(--transition);
+}
+
+.backlink-chip:hover {
+  background: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+}
+
+/* === Outbound links === */
+.outbound-section {
+  margin-top: 1.5rem;
+}
+
+.outbound-section h3 {
+  font-size: 0.9375rem;
+  color: var(--md-sys-color-on-surface-variant);
+  margin-bottom: 0.5rem;
+}
+
+/* === Entry Card (with accent border) === */
+.entry-card {
+  background: var(--md-sys-color-surface-container-low);
+  border: 1px solid var(--md-sys-color-outline-variant);
+  border-left: 4px solid var(--section-color);
+  border-radius: var(--md-sys-shape-corner-medium);
+  padding: 1rem;
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow var(--transition), border-color var(--transition);
+}
+
+.entry-card:hover {
+  box-shadow: var(--md-sys-elevation-2);
+  border-color: var(--md-sys-color-outline);
+}
+
+.entry-card .card-title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--section-color);
+  margin-bottom: 0.25rem;
+}
+
+.entry-card .card-desc {
+  font-size: 0.8125rem;
+  color: var(--md-sys-color-on-surface-variant);
+  line-height: 1.5;
+}
+
+.entry-card .card-thumb {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--md-sys-shape-corner-small);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* === Hero (home page) === */
+.hero {
+  padding: 2.5rem 0 1rem;
+}
+
+.hero h1 {
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #4fc3f7, #ba68c8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-subtitle {
+  color: var(--md-sys-color-on-surface-variant);
+  font-size: 1.125rem;
+  max-width: 60ch;
+}
+
+.search-section {
+  margin: 1.5rem 0;
+  max-width: 480px;
+}
+
+/* === Quick reference === */
+.quick-ref {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: var(--md-sys-color-surface-container-low);
+  border: 1px solid var(--md-sys-color-outline-variant);
+  border-radius: var(--md-sys-shape-corner-medium);
+}
+
+.quick-ref h3 {
+  font-size: 0.9375rem;
+  margin-bottom: 0.75rem;
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.25rem; }
+  .portrait-row { flex-direction: column; }
+  .portrait { max-width: 100%; }
+}

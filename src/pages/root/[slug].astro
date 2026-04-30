@@ -1,0 +1,30 @@
+---
+import DocLayout from '../../layouts/DocLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const rootFiles = await getCollection('root');
+  return rootFiles.map((file) => ({
+    params: { slug: file.id.replace(/\.md$/, '') },
+    props: { file },
+  }));
+}
+
+const { file } = Astro.props;
+const { Content } = await render(file);
+
+const title = file.data.title || file.id.replace(/\.md$/, '').replace(/-/g, ' ');
+
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: title },
+];
+---
+
+<DocLayout
+  title={title}
+  description={file.data.description}
+  breadcrumbs={breadcrumbs}
+>
+  <Content />
+</DocLayout>

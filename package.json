@@ -1,33 +1,27 @@
 {
-  "name": "world-kaleb-one",
-  "private": true,
-  "version": "0.0.0",
+  "name": "masks-kaleb-one",
   "type": "module",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=22.12.0"
+  },
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "prebuild": "tsx src/scripts/build-graph.ts",
+    "dev": "astro dev",
+    "build": "astro build",
+    "postbuild": "pagefind --site dist/",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
-    "react-markdown": "^10.1.0",
-    "react-router-dom": "^7.14.1",
+    "@kaleb-one/theme": "^0.1.0",
+    "astro": "^6.1.10",
     "rehype-raw": "^7.0.0",
-    "remark-gfm": "^4.0.1"
+    "remark-gfm": "^4.0.0",
+    "remark-obsidian": "^1.11.0"
   },
   "devDependencies": {
-    "@eslint/js": "^9.39.4",
-    "@tailwindcss/vite": "^4.2.2",
-    "@types/react": "^19.2.14",
-    "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^6.0.1",
-    "eslint": "^9.39.4",
-    "eslint-plugin-react-hooks": "^7.0.1",
-    "eslint-plugin-react-refresh": "^0.5.2",
-    "globals": "^17.4.0",
-    "tailwindcss": "^4.2.2",
-    "vite": "^8.0.4"
+    "pagefind": "^1.3.0",
+    "tsx": "^4.19.0"
   }
 }

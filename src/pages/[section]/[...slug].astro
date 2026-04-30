@@ -1,0 +1,120 @@
+---
+import EntryLayout from '../../layouts/EntryLayout.astro';
+import { SECTIONS, getSection } from '../../config/sections';
+import { getCollection, render } from 'astro:content';
+import graphData from '../../data/graph.json';
+
+export async function getStaticPaths() {
+  const allEntries = await getCollection('entries');
+  const paths = [];
+
+  for (const entry of allEntries) {
+    const id = entry.id.replace(/^\.\//, '').replace(/\.md$/, '');
+
+    // Determine section from path
+    let sectionKey = '';
+    let section: typeof SECTIONS[number] | undefined;
+    for (const s of SECTIONS) {
+      if (id.startsWith(s.subfolder + '/')) {
+        sectionKey = s.key;
+        section = s;
+        break;
+      }
+    }
+
+    // Skip root-level files (they don't belong to a section)
+    if (!sectionKey || !section) continue;
+
+    // Strip the section subfolder prefix to get a clean slug
+    const slug = id.replace(section.subfolder + '/', '');
+
+    paths.push({
+      params: { section: sectionKey, slug },
+      props: { entry, sectionKey },
+    });
+  }
+
+  // Deduplicate by params key
+  const seen = new Set<string>();
+  return paths.filter((p) => {
+    const key = `${p.params.section}/${p.params.slug}`;
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
+
+const { entry, sectionKey } = Astro.props;
+const section = getSection(sectionKey)!;
+const { Content } = await render(entry);
+
+const id = entry.id.replace(/^\.\//, '').replace(/\.md$/, '');
+const stem = id.split('/').pop()!;
+const title = entry.data.title || stem.replace(/-/g, ' ');
+
+// File counts for sidebar
+const allEntries = await getCollection('entries');
+const fileCounts: Record<string, number> = {};
+for (const s of SECTIONS) {
+  fileCounts[s.key] = allEntries.filter((e) => {
+    const eid = e.id.replace(/^\.\//, '');
+    return eid.startsWith(s.subfolder + '/');
+  }).length;
+}
+
+// Backlinks from graph
+const backlinkIds: string[] = graphData.backlinks?.[id] || [];
+const backlinkLabels: Record<string, string> = {};
+for (const nid of backlinkIds) {
+  const node = graphData.nodes?.find((n) => n.id === nid);
+  backlinkLabels[nid] = node?.label || nid;
+}
+
+// Outbound links from graph
+const outboundLinks = graphData.edges
+  ?.filter((e) => e.source === id)
+  .map((e) => {
+    const targetNode = graphData.nodes?.find((n) => n.id === e.target);
+    return {
+      target: e.target,
+      label: e.label || targetNode?.label || e.target,
+    };
+  }) || [];
+
+// Check for portrait images
+const civilianPortrait = `/images/characters/${stem}-civilian.png`;
+const superPortrait = `/images/characters/${stem}-super.png`;
+
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: section.label, href: `/${sectionKey}` },
+  { label: title },
+];
+---
+
+<EntryLayout
+  title={title}
+  description={entry.data.description}
+  section={sectionKey}
+  breadcrumbs={breadcrumbs}
+  fileCounts={fileCounts}
+  backlinks={backlinkIds}
+  backlinkLabels={backlinkLabels}
+  outboundLinks={outboundLinks}
+>
+  <!-- Portraits -->
+  {stem.includes('-civilian') || stem.includes('-super') ? (
+    <div slot="portraits" class="portrait-row">
+      <figure class="portrait">
+        <img src={civilianPortrait} alt={`${title} civilian`} loading="lazy" />
+        <figcaption>Civilian</figcaption>
+      </figure>
+      <figure class="portrait">
+        <img src={superPortrait} alt={`${title} superhero`} loading="lazy" />
+        <figcaption>Superhero</figcaption>
+      </figure>
+    </div>
+  ) : null}
+
+  <Content />
+</EntryLayout>
