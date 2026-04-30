@@ -16,8 +16,8 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Checkout vault (sparse)
-        if: ${{ secrets.REPO_PAT != '' }}
         uses: actions/checkout@v4
+        if: vars.VAULT_CHECKOUT_ENABLED == 'true'
         with:
           repository: triursa/second-brain-vault
           token: ${{ secrets.REPO_PAT }}
@@ -32,10 +32,11 @@ jobs:
 
       - run: npm ci
 
-      - name: Build
-        run: npm run build
-        env:
-          VAULT_DIR: ${{ secrets.REPO_PAT != '' && format('{0}/vault/domains/worldbuilding/halden-city', github.workspace) || '' }}
+      - name: Set VAULT_DIR
+        if: vars.VAULT_CHECKOUT_ENABLED == 'true'
+        run: echo "VAULT_DIR=${{ github.workspace }}/vault/domains/worldbuilding/halden-city" >> "$GITHUB_ENV"
+
+      - run: npm run build
 
       - name: Publish to Cloudflare Pages
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
