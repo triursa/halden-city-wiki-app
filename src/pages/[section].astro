@@ -2,9 +2,8 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import CardGrid from '../components/CardGrid.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
-import { SECTIONS, getSection } from '../config/sections';
+import { SECTIONS } from '../config/sections';
 import { getCollection } from 'astro:content';
-import graphData from '../data/graph.json';
 
 export async function getStaticPaths() {
   return SECTIONS.map((section) => ({

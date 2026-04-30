@@ -6,6 +6,7 @@
     "node": ">=22.12.0"
   },
   "scripts": {
+    "predev": "tsx src/scripts/build-graph.ts || echo '{\"nodes\":[],\"edges\":[],\"backlinks\":{}}' > src/data/graph.json",
     "prebuild": "tsx src/scripts/build-graph.ts",
     "dev": "astro dev",
     "build": "astro build",

@@ -3,7 +3,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import CardGrid from '../components/CardGrid.astro';
 import { SECTIONS } from '../config/sections';
 import { getCollection } from 'astro:content';
-import graphData from '../data/graph.json';
 
 // Compute file counts per section
 const allEntries = await getCollection('entries');
@@ -70,7 +69,6 @@ const quickRefItems = rootFiles.map((f) => ({
 
 <script is:inline src="/pagefind/pagefind-ui.js"></script>
 <link rel="stylesheet" href="/pagefind/pagefind-ui.css">
-<link rel="stylesheet" href="/pagefind-swatch.css">
 
 <script is:inline>
   window.addEventListener('DOMContentLoaded', () => {

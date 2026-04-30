@@ -1,6 +1,7 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
+import { SECTIONS } from '../config/sections';
 
 interface Props {
   title: string;
@@ -23,6 +24,23 @@ const {
   backlinkLabels = {},
   outboundLinks = [],
 } = Astro.props;
+
+// Resolve a vault entry ID (e.g. "characters/pc/adrian-vega") to a proper URL
+function resolveEntryUrl(id: string): string {
+  // Check if ID starts with a known section subfolder
+  for (const s of SECTIONS) {
+    if (id.startsWith(s.subfolder + '/')) {
+      const slug = id.replace(s.subfolder + '/', '');
+      return `/${s.key}/${slug}`;
+    }
+  }
+  // Root-level files
+  if (!id.includes('/')) {
+    return `/root/${id}`;
+  }
+  // Fallback: use the last segment as slug under the current section
+  return `/${section}/${id.split('/').pop()}`;
+}
 ---
 
 <BaseLayout
@@ -64,7 +82,7 @@ const {
         <ul class="backlinks-list">
           {backlinks.map((id) => (
             <li>
-              <a href={`/entry/${id}`} class="backlink-chip">
+              <a href={resolveEntryUrl(id)} class="backlink-chip">
                 {backlinkLabels[id] || id}
               </a>
             </li>
@@ -80,7 +98,7 @@ const {
         <ul class="backlinks-list">
           {outboundLinks.map(({ target, label }) => (
             <li>
-              <a href={`/entry/${target}`} class="backlink-chip">
+              <a href={resolveEntryUrl(target)} class="backlink-chip">
                 {label || target}
               </a>
             </li>

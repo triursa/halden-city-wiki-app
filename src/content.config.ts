@@ -2,11 +2,14 @@ import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
 import path from 'node:path';
 import fs from 'node:fs';
+import { fileURLToPath } from 'node:url';
 
 const VAULT_DIR = process.env.VAULT_DIR || '../second-brain-vault/domains/worldbuilding/halden-city';
 
-// Resolve vault dir relative to project root (src/ -> ../)
-const projectRoot = path.resolve(import.meta.dirname ?? '.', '..');
+// Resolve vault dir relative to project root using fileURLToPath for reliability
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const projectRoot = path.resolve(__dirname, '..');
 let vaultBase = path.resolve(projectRoot, VAULT_DIR);
 
 // Fallback: if VAULT_DIR doesn't exist, use the local copy in public/vault

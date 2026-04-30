@@ -15,6 +15,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Checkout vault (sparse)
+        uses: actions/checkout@v4
+        with:
+          repository: triursa/second-brain-vault
+          token: ${{ secrets.REPO_PAT }}
+          path: vault
+          sparse-checkout: |
+            domains/worldbuilding/halden-city
+
       - uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -22,7 +31,10 @@ jobs:
 
       - run: npm ci
 
-      - run: npm run build
+      - name: Build
+        run: npm run build
+        env:
+          VAULT_DIR: ${{ github.workspace }}/vault/domains/worldbuilding/halden-city
 
       - name: Publish to Cloudflare Pages
         uses: cloudflare/pages-action@v1

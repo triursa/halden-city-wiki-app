@@ -81,9 +81,11 @@ const outboundLinks = graphData.edges
     };
   }) || [];
 
-// Check for portrait images
+// Check for portrait images (available for all character entries, not just already-named ones)
 const civilianPortrait = `/images/characters/${stem}-civilian.png`;
 const superPortrait = `/images/characters/${stem}-super.png`;
+// Show portraits for character entries (in pcs, alliance, or npcs sections)
+const isCharacterEntry = ['pcs', 'alliance', 'npcs'].includes(sectionKey);
 
 const breadcrumbs = [
   { label: 'Home', href: '/' },
@@ -103,7 +105,7 @@ const breadcrumbs = [
   outboundLinks={outboundLinks}
 >
   <!-- Portraits -->
-  {stem.includes('-civilian') || stem.includes('-super') ? (
+  {isCharacterEntry ? (
     <div slot="portraits" class="portrait-row">
       <figure class="portrait">
         <img src={civilianPortrait} alt={`${title} civilian`} loading="lazy" />

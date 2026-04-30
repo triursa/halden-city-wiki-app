@@ -35,6 +35,9 @@ const {
     <BaseHead title={title} description={description} domain={domain} />
   </head>
   <body>
+    <button class="mobile-menu-btn" aria-label="Toggle navigation" onclick="document.querySelector('.sidebar').classList.toggle('open')">
+      ☰
+    </button>
     <div class="app-shell">
       <Sidebar currentPath={currentPath} fileCounts={fileCounts} />
       <main class="main-content">
@@ -56,7 +59,25 @@ const {
     max-width: 960px;
   }
 
+  .mobile-menu-btn {
+    display: none;
+    position: fixed;
+    top: 0.75rem;
+    left: 0.75rem;
+    z-index: 200;
+    background: var(--md-sys-color-surface-container);
+    color: var(--md-sys-color-on-surface);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-small, 8px);
+    padding: 0.25rem 0.5rem;
+    font-size: 1.25rem;
+    cursor: pointer;
+  }
+
   @media (max-width: 768px) {
+    .mobile-menu-btn {
+      display: block;
+    }
     .app-shell {
       flex-direction: column;
     }
