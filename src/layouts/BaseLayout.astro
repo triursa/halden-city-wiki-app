@@ -1,0 +1,88 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Sidebar from '../components/Sidebar.astro';
+
+interface NavItem {
+  label: string;
+  href: string;
+  icon?: string;
+}
+
+interface Props {
+  title: string;
+  description?: string;
+  domain?: string;
+  navItems?: NavItem[];
+  currentPath?: string;
+  fileCounts?: Record<string, number>;
+  section?: string;
+}
+
+const {
+  title,
+  description,
+  domain = 'masks',
+  navItems = [],
+  currentPath = Astro.url.pathname,
+  fileCounts = {},
+  section,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" data-theme="obsidian" data-domain={domain} data-section={section}>
+  <head>
+    <BaseHead title={title} description={description} domain={domain} />
+  </head>
+  <body>
+    <button class="mobile-menu-btn" aria-label="Toggle navigation" onclick="document.querySelector('.sidebar').classList.toggle('open')">
+      ☰
+    </button>
+    <div class="app-shell">
+      <Sidebar currentPath={currentPath} fileCounts={fileCounts} />
+      <main class="main-content">
+        <slot />
+      </main>
+    </div>
+  </body>
+</html>
+
+<style>
+  .app-shell {
+    display: flex;
+    min-height: 100vh;
+  }
+
+  .main-content {
+    flex: 1;
+    padding: var(--md-sys-spacing-6, 1.5rem) var(--md-sys-spacing-8, 2rem);
+    max-width: 960px;
+  }
+
+  .mobile-menu-btn {
+    display: none;
+    position: fixed;
+    top: 0.75rem;
+    left: 0.75rem;
+    z-index: 200;
+    background: var(--md-sys-color-surface-container);
+    color: var(--md-sys-color-on-surface);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: var(--md-sys-shape-corner-small, 8px);
+    padding: 0.25rem 0.5rem;
+    font-size: 1.25rem;
+    cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    .mobile-menu-btn {
+      display: block;
+    }
+    .app-shell {
+      flex-direction: column;
+    }
+    .main-content {
+      padding: var(--md-sys-spacing-4, 1rem);
+    }
+  }
+</style>

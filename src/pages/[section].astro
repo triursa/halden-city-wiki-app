@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CardGrid from '../components/CardGrid.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import { SECTIONS } from '../config/sections';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  return SECTIONS.map((section) => ({
+    params: { section: section.key },
+    props: { section },
+  }));
+}
+
+const { section } = Astro.props;
+
+// Get all entries, filter to this section's subfolder
+const allEntries = await getCollection('entries');
+const entries = allEntries.filter((entry) => {
+  const id = entry.id.replace(/^\.\//, '');
+  return id.startsWith(section.subfolder + '/');
+});
+
+// Compute all file counts for sidebar
+const fileCounts: Record<string, number> = {};
+for (const s of SECTIONS) {
+  fileCounts[s.key] = allEntries.filter((e) => {
+    const id = e.id.replace(/^\.\//, '');
+    return id.startsWith(s.subfolder + '/');
+  }).length;
+}
+
+// Build card items with clean URLs (strip section subfolder from href)
+const items = entries.map((entry) => {
+  const id = entry.id.replace(/^\.\//, '').replace(/\.md$/, '');
+  const slug = id.replace(section.subfolder + '/', '');
+  return {
+    title: entry.data.title || slug.split('/').pop()!.replace(/-/g, ' '),
+    description: entry.data.description,
+    href: `/${section.key}/${slug}`,
+    tags: entry.data.tags,
+  };
+});
+
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: section.label },
+];
+---
+
+<BaseLayout
+  title={`${section.label} — Halden City Wiki`}
+  domain="masks"
+  section={section.key}
+  fileCounts={fileCounts}
+>
+  <Breadcrumb items={breadcrumbs} />
+  <article>
+    <h1 style={`color: ${section.color}; border-bottom: 2px solid ${section.color}; padding-bottom: 0.5rem; margin-bottom: 1.5rem;`}>
+      {section.icon} {section.label}
+    </h1>
+    <p class="section-desc" style="color: var(--md-sys-color-on-surface-variant); margin-bottom: 1.5rem;">
+      {entries.length} entries in {section.label}
+    </p>
+    <CardGrid items={items} accentColor={section.color} />
+  </article>
+</BaseLayout>
